@@ -37,9 +37,6 @@ src/
 ├─ app.js
 └─ server.js
 
-yaml
-Copiar código
-
 ---
 
 ## ▶️ Démarrer en local
@@ -51,8 +48,6 @@ npm start             # API sur http://localhost:3000 et Swagger sur /docs
 # Swagger local : http://localhost:3000/docs
 Variables d’environnement (optionnelles) :
 
-ini
-Copiar código
 DB_PATH=./data.sqlite
 PORT=3000
 CORS est activé globalement (app.use(cors())).
@@ -71,7 +66,6 @@ GET /jokes/random — Obtenir une blague aléatoire
 Schéma Joke :
 
 json
-Copiar código
 {
   "id": 1,
   "question": "Que dit un oignon quand il se cogne ?",
@@ -81,26 +75,14 @@ Copiar código
 }
 🧪 Exemples rapides (cURL / Postman)
 Créer une blague :
-
-bash
-Copiar código
 curl -X POST https://carambar-jokes-api-yjvd.onrender.com/api/v1/jokes \
   -H "Content-Type: application/json" \
   -d '{"question":"Pourquoi les devs aiment le café ?","answer":"Parce qu’ils déboguent mieux !"}'
 Aléatoire :
-
-bash
-Copiar código
 curl https://carambar-jokes-api-yjvd.onrender.com/api/v1/jokes/random
 Toutes les blagues :
-
-bash
-Copiar código
 curl https://carambar-jokes-api-yjvd.onrender.com/api/v1/jokes
 Par id :
-
-bash
-Copiar código
 curl https://carambar-jokes-api-yjvd.onrender.com/api/v1/jokes/1
 🧱 Versionnement
 L’API est exposée sous le préfixe /api/v1.
